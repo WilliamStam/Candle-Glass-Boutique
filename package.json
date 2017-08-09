@@ -1,0 +1,28 @@
+{
+  "name": "Candle-Glass-Boutique",
+  "version": "1.0.0",
+  "private": true,
+  "minimum-stability": "dev",
+  "devDependencies": {
+    "del": "latest",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "latest",
+    "gulp-clean-css": "latest",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-concat": "latest",
+    "gulp-duration": "latest",
+    "gulp-foreach": "^0.1.0",
+    "gulp-git": "latest",
+    "gulp-imagemin": "latest",
+    "gulp-livereload": "latest",
+    "gulp-newer": "latest",
+    "gulp-rename": "latest",
+    "gulp-sass": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-total-task-time": "latest",
+    "gulp-uglify": "latest",
+    "merge-stream": "latest",
+    "run-sequence": "latest",
+    "time-require": "latest"
+  }
+}

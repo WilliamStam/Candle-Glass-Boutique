@@ -1,0 +1,47 @@
+# Folders #
+###################
+_crap/*
+cache/*
+media/*
+tmp/*
+.idea/*
+node_modules/*
+components/*
+vendor/*
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.phar
+*.map
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store*
+Thumbs.db
+
+config.inc.php
+windows_task.*

@@ -1,0 +1,26 @@
+#footer {
+  background: #d0d3d9;
+  font-size: 30px;
+  img {
+	height: 85px;
+	margin: 20px;
+	transition: all 1s ease;
+  }
+  &:hover {
+	a {
+	  img {
+		opacity:0.3;
+		filter: gray; /* IE6-9 */
+		-webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+		filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+	  }
+	}
+  }
+  a:hover {
+	img {
+	  opacity:1;
+	  -webkit-filter: grayscale(0);
+	  filter: none;
+	}
+  }
+}

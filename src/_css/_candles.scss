@@ -1,0 +1,17 @@
+.candle {
+  .type-leader {
+	height:265px;
+	position: relative;
+	overflow: hidden;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+  }
+  .type-body {
+	height:540px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+  }
+}

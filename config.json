@@ -1,0 +1,36 @@
+{
+  "flavours": [
+	{
+	  "name": "African Thatch",
+	  "folder": "african-thatch",
+	  "title": "African Thatch title"
+	},
+	{
+	  "name": "Citronella",
+	  "folder": "citronella",
+	  "title":"Citronella"
+	},
+	{
+	  "name": "Fig & Ginger",
+	  "folder": "fig-and-ginger",
+	  "title":"Fig & Ginger"
+	},
+	{
+	  "name": "Lavender",
+	  "folder": "lavender",
+	  "title":"Lavender"
+	},
+	{
+	  "name": "Orange & Cinnamon",
+	  "folder": "orange-and-cinnamon",
+	  "title":"Orange & Cinnamon"
+	},
+	{
+	  "name": "Vanilla",
+	  "folder": "vanilla",
+	  "title":"Vanilla"
+	}
+
+
+  ]
+}
