@@ -11,6 +11,11 @@ var livereload = require('gulp-livereload');
 var imagemin = require('gulp-imagemin');
 var config = require('./config.json');
 var fs = require('fs')
+require("time-require");
+var duration = require('gulp-duration');
+
+
+var gitCommitMessage = false;
 
 
 var paths = {
@@ -215,3 +220,69 @@ gulp.task('build', build);
  * Define default task that can be called by just running `gulp` from cli
  */
 gulp.task('default', watch);
+
+
+
+
+
+gulp.task('git-commit', function (done) {
+	gitCommitMessage = (typeof gitCommitMessage !== 'undefined' && gitCommitMessage != "") ? gitCommitMessage : "gulp commit";
+
+	var d = new Date();
+	var prefix = d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2) + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2) + ":" + ("0" + d.getSeconds()).slice(-2);
+
+
+	gitCommitMessage = prefix + "\n" + gitCommitMessage;
+
+	git = (typeof git !== 'undefined') ? git : require('gulp-git');
+
+	var timer = duration('git-commit');
+	return gulp.src('./')
+	.pipe(git.commit(gitCommitMessage))
+	.pipe(timer);
+
+
+});
+gulp.task('git-push', function (done) {
+
+
+	git = (typeof git !== 'undefined') ? git : require('gulp-git');
+
+	var branch_ = 'WIP';
+	git.revParse({args:'--abbrev-ref HEAD'}, function (err, branch) {
+		branch_ = branch;
+		console.log("Pushing to: "+branch_);
+		git.push('remote', branch_, function (err) {
+			if (err) {
+				throw err;
+			} else {
+				done();
+			}
+		});
+
+	});
+
+
+
+
+
+
+});
+gulp.task('git-diff', function (done) {
+
+
+	git = (typeof git !== 'undefined') ? git : require('gulp-git');
+
+	git.exec({args: ' diff --stat'}, function (err, stdout) {
+		gitCommitMessage = stdout
+		if (err) throw err;
+		done();
+	});
+
+
+});
+
+
+gulp.task('deploy', gulp.series('build', 'git-diff', 'git-commit', 'git-push', function (done) {
+	done();
+}));
