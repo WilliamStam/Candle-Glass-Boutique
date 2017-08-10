@@ -1,6 +1,8 @@
 #footer {
   background: #d0d3d9;
-  font-size: 30px;
+  font-size: 15px;
+
+  position:relative;
   img {
 	height: 85px;
 	margin: 20px;
@@ -22,5 +24,23 @@
 	  -webkit-filter: grayscale(0);
 	  filter: none;
 	}
+  }
+  iframe {
+	margin-left:-15px;
+	margin-right:-15px;
+  }
+  #address-details {
+	background:rgba(250,250,250,0.7);
+	position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	padding-top:20px;
+  }
+  #small-footer-logo {
+	position:absolute;
+
+	left:100px;
+	bottom:0;
   }
 }
