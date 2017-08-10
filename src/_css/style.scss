@@ -2,3 +2,28 @@
 @import "masterhead";
 @import "footer";
 @import "candles";
+
+#vanilla-page {
+  .candle-pack {
+	background-color: #c7bdab;
+	border-radius:20px;
+	padding:15px;
+	margin-bottom:30px;
+	position:relative;
+	height:220px;
+	img {
+	  max-height:200px;
+	  object-fit: contain;
+	}
+	.pack-label {
+	  border:1px solid #fff;
+	  color:#fff;
+	  border-radius:50px;
+	  text-align:center;
+	  padding:5px 20px;
+	  position:absolute;
+	  top:10px;
+	  background: rgba(199, 189, 171, 0.8);
+	}
+  }
+}

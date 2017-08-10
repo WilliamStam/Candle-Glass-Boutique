@@ -61,7 +61,7 @@ function onError(err) {
 function clean() {
 	// You can use multiple globbing patterns as you would with `gulp.src`,
 	// for example if you are using del 2.0 or above, return its promise
-	return del([ 'assets' ]);
+	return del([ 'dist/**/*/','dist/*.[^pd]*' ]);
 }
 
 /*
@@ -134,9 +134,14 @@ function flavours(d) {
 
 
 
-		gulp.src(src+"_images/*.{jpg,jpeg,png}", {since: gulp.lastRun(images)})
+		gulp.src(src+"_images/[^_]*.{jpg,jpeg,png}", {since: gulp.lastRun(images)})
 		.pipe(newer(dest+"_images/"))
-		.pipe(imagemin({optimizationLevel: 5}))
+		.pipe(imagemin([
+			imagemin.gifsicle({interlaced: true}),
+			imagemin.jpegtran({progressive: true}),
+			imagemin.optipng({optimizationLevel: 5}),
+			imagemin.svgo({plugins: [{removeViewBox: true}
+		]})]))
 		.pipe(gulp.dest(dest+"_images/"))
 		.pipe(livereload());
 

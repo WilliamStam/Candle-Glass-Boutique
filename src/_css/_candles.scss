@@ -13,5 +13,18 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	.text-box {
+	  background: rgba(250,250,250,0.7);
+	  width:400px;
+	  padding:20px;
+	  font-size:30px;
+	  font-weight:bold;
+	  text-align:left;
+	  line-height:1.3;
+	  letter-spacing: -1px;
+	  span {
+		text-shadow:0 0 3px #fff;
+	  }
+	}
   }
 }
