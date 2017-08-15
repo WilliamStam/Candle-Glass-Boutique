@@ -38,11 +38,26 @@
 	right:15px;
 	bottom:0;
 	padding-top:20px;
+	width:220px;
   }
   #small-footer-logo {
 	position:absolute;
 
 	left:100px;
 	bottom:0;
+  }
+  #social-media {
+	position:absolute;
+	top:0;
+	right:240px;
+	bottom:0;
+	padding-top:10px;
+	width:90px;
+	text-align: center;
+	a {
+	  display:block;
+	  width:100px;
+	  height:100px;
+	}
   }
 }

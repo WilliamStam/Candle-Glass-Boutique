@@ -20,14 +20,15 @@
 		<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<a class="navbar-brand" href="#">Candles</a>
+
 
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
 
 				<li class="nav-item">
-					<a class="nav-link" href="{{page_folder}}index.html"><img src="{{page_folder}}_images/home-icon.png" alt="" style="height:32px;"></a>
+					<a class="nav-link" href="{{page_folder}}index.html"><img src="{{page_folder}}_images/home-icon.png" alt="" style="height:32px;"> Home</a>
 				</li>
+
 				{{#each flavours}}
 				<li class="nav-item">
 					<a class="nav-link" href="{{../page_folder}}{{folder}}">{{name}}</a>

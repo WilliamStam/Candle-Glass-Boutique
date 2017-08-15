@@ -1,5 +1,6 @@
 {
   "flavours": [
+
 	{
 	  "name": "African Thatch",
 	  "folder": "african-thatch",
@@ -29,6 +30,11 @@
 	  "name": "Vanilla",
 	  "folder": "vanilla",
 	  "title":"Vanilla"
+	},
+	{
+	  "name": "Candles",
+	  "folder": "candles",
+	  "title":"Candles"
 	}
 
 
